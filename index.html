@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Zawa Therapeutics finds, in-licenses, and advances overlooked small-molecule programs, guided by deep drug-development experience and AI-enabled analysis."
+  />
+
+  <link rel="canonical" href="https://zawatx.com/" />
+
+  <title>Zawa Therapeutics | Development-First Biotech</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b2240'/%3E%3Cstop offset='1' stop-color='%230e8a8c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url%28%23g%29'/%3E%3Cpath d='M18 18h28v6L26 40h20v6H18v-6l20-16H18z' fill='%23fff'/%3E%3C/svg%3E" />
+
+  <!-- Share previews (LinkedIn, X, Slack, iMessage). Upload og-image.png to the site root. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Zawa Therapeutics" />
+  <meta property="og:title" content="Zawa Therapeutics | Development-First Biotech" />
+  <meta property="og:description" content="Finding, in-licensing, and advancing small molecules that deserve a second chance." />
+  <meta property="og:url" content="https://zawatx.com/" />
+  <meta property="og:image" content="https://zawatx.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Zawa Therapeutics: a development-first biotech company" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts: Sora for the wordmark and headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Structured company information -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zawa Therapeutics",
+    "legalName": "Zawa Therapeutics, LLC",
+    "url": "https://zawatx.com",
+    "email": "info@zawatx.com",
+    "description": "An early-stage, development-first biotechnology company that finds, in-licenses, and advances overlooked small-molecule therapeutics, guided by deep drug-development experience and AI-enabled analysis.",
+    "knowsAbout": ["Drug development", "Small-molecule therapeutics", "In-licensing"],
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Mirta Grifman, PhD",
+        "jobTitle": "Co-Founder & CEO"
+      },
+      {
+        "@type": "Person",
+        "name": "Jeymi Tambiah, MD",
+        "jobTitle": "Co-Founder & Advisor"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --navy: #0b2240;
+      --navy-deep: #071830;
+      --teal: #0e8a8c;
+      --teal-text: #0b7577;   /* darker teal for small text: passes WCAG AA on white and tint */
+      --teal-bright: #22c1b2;
+      --coral: #e8664a;
+      --coral-text: #c2462b;  /* darker coral for small text: passes WCAG AA on white */
+      --tint: #e3f3f1;
+      --text: #1b2a38;
+      --muted: #4d5d6a;
+      --white: #ffffff;
+      --off-white: #f6f9fa;
+      --border: #d6e3e6;
+      --font-display: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      html {
+        scroll-behavior: smooth;
+      }
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .nowrap {
+      white-space: nowrap;
+    }
+
+    /* Navigation */
+
+    nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-inner {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-word {
+      font-family: var(--font-display);
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      background: linear-gradient(120deg, var(--navy) 0%, var(--teal) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .logo-sub {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      color: var(--teal);
+      margin-left: 12px;
+      padding-left: 12px;
+      border-left: 1px solid var(--border);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal-text);
+    }
+
+    /* Hero */
+
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 82% 30%, rgba(34, 193, 178, 0.35), transparent 38%),
+        radial-gradient(circle at 10% 90%, rgba(232, 102, 74, 0.18), transparent 35%),
+        linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 50%, #0d4d63 100%);
+    }
+
+    .hero-content {
+      max-width: 860px;
+      padding: 105px 0;
+    }
+
+    .eyebrow {
+      color: var(--teal-bright);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: var(--white);
+      font-size: clamp(42px, 7vw, 70px);
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 21px;
+      color: #d3e4ea;
+      line-height: 1.65;
+    }
+
+    /* Sections */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-blue {
+      background: var(--tint);
+    }
+
+    .section-label {
+      color: var(--teal-text);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: clamp(30px, 5vw, 44px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      margin-bottom: 28px;
+      max-width: 880px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.8;
+      max-width: 820px;
+    }
+
+    .lead + .lead {
+      margin-top: 24px;
+    }
+
+    /* Cards */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 52px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--teal);
+      border-radius: 6px;
+      padding: 34px;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .card {
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+      }
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 28px rgba(11, 34, 64, 0.10);
+    }
+
+    .card-number {
+      font-family: var(--font-display);
+      color: var(--coral-text);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* Asset Intelligence */
+
+    .intelligence-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 70px;
+      align-items: start;
+      margin-top: 40px;
+    }
+
+    .intelligence-points {
+      border-left: 3px solid var(--teal);
+      padding-left: 30px;
+    }
+
+    .intelligence-point {
+      margin-bottom: 28px;
+    }
+
+    .intelligence-point:last-child {
+      margin-bottom: 0;
+    }
+
+    .intelligence-point h3 {
+      color: var(--navy);
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .intelligence-point p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* Criteria */
+
+    .criteria-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px 40px;
+      margin-top: 48px;
+      max-width: 900px;
+    }
+
+    .criterion {
+      border-top: 2px solid var(--teal);
+      padding: 24px 0;
+    }
+
+    .criterion h3 {
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .criterion p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* Leadership */
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 52px;
+      max-width: 960px;
+    }
+
+    .team-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--teal);
+      border-radius: 6px;
+      padding: 36px;
+    }
+
+    .team-card h3 {
+      color: var(--navy);
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .team-title {
+      color: var(--teal-text);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .team-card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .team-companies {
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.7;
+    }
+
+    /* Contact */
+
+    .contact {
+      color: var(--white);
+      background:
+        radial-gradient(circle at 85% 20%, rgba(34, 193, 178, 0.28), transparent 40%),
+        linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, #0d4d63 100%);
+    }
+
+    .contact .section-label {
+      color: var(--teal-bright);
+    }
+
+    .contact h2 {
+      color: var(--white);
+    }
+
+    .contact .lead {
+      color: #cfdfe6;
+    }
+
+    .contact-note {
+      color: #cfdfe6;
+      font-size: 15px;
+      margin-top: 18px;
+      max-width: 820px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 26px;
+      border-radius: 4px;
+      background: var(--teal-bright);
+      color: var(--navy-deep);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--white);
+    }
+
+    .contact-email {
+      color: #cfdfe6;
+      font-size: 15px;
+      margin-top: 16px;
+    }
+
+    .contact-email a {
+      color: var(--teal-bright);
+      font-weight: 600;
+    }
+
+    /* Footer */
+
+    footer {
+      background: var(--navy-deep);
+      color: #8fa2b0;
+      padding: 28px 0;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 800px) {
+      /* On phones, keep only the Contact link, styled as a button */
+      .nav-links a:not(.nav-contact) {
+        display: none;
+      }
+
+      .nav-links .nav-contact {
+        padding: 8px 16px;
+        border-radius: 4px;
+        background: var(--teal-bright);
+        color: var(--navy-deep);
+        font-weight: 600;
+      }
+
+      .hero {
+        min-height: 540px;
+      }
+
+      .hero-content {
+        padding: 75px 0;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+
+      .cards,
+      .team-grid,
+      .criteria-grid,
+      .intelligence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intelligence-grid {
+        gap: 42px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .logo-word {
+        font-size: 22px;
+      }
+
+      .logo-sub {
+        letter-spacing: 0.22em;
+        margin-left: 8px;
+        padding-left: 8px;
+      }
+
+      .nav-links .nav-contact {
+        padding: 7px 12px;
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .logo-sub {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="nav-inner">
+
+      <a class="logo" href="#">
+        <span class="logo-word">ZAWA</span>
+        <span class="logo-sub">THERAPEUTICS</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#approach">Approach</a>
+        <a href="#intelligence">Asset Intelligence</a>
+        <a href="#focus">What We Look For</a>
+        <a href="#leadership">Leadership</a>
+        <a class="nav-contact" href="#contact">Contact</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="eyebrow">Small-molecule drug development</div>
+
+          <h1>A development-first biotech company.</h1>
+
+          <p>
+            Zawa Therapeutics finds, in-licenses, and advances small
+            molecules that deserve a second chance, guided by deep
+            drug-development experience and
+            <span class="nowrap">AI-enabled</span> analysis.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- APPROACH -->
+
+    <section id="approach">
+      <div class="container">
+
+        <div class="section-label">Our Approach</div>
+
+        <h2>Revisiting missed opportunities.</h2>
+
+        <p class="lead">
+          Zawa advances therapeutics rather than discovering them. We look
+          for clinically tested or IND-ready small-molecule programs that
+          were discontinued, deprioritized, or made non-core, and ask
+          whether focused development could take them further.
+        </p>
+
+        <p class="lead">
+          We are early stage and currently evaluating programs where a
+          different development strategy could change the outcome.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <div class="card-number">01</div>
+            <h3>Find overlooked assets</h3>
+            <p>
+              We search systematically for small-molecule programs that
+              already have meaningful scientific, regulatory, or clinical
+              evidence but are no longer a priority for their owners.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">02</div>
+            <h3>Understand what stalled</h3>
+            <p>
+              We work out why development stopped (trial design,
+              execution, the therapeutic window, or a shift in strategy)
+              and whether that cause can be fixed.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-number">03</div>
+            <h3>Chart the next step</h3>
+            <p>
+              We decide which programs merit investment and how to advance
+              them efficiently, combining structured evaluation with
+              hands-on development judgment.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ASSET INTELLIGENCE -->
+
+    <section id="intelligence" class="section-blue">
+      <div class="container">
+
+        <div class="section-label">Asset Intelligence</div>
+
+        <h2>Using AI to find and evaluate overlooked programs.</h2>
+
+        <div class="intelligence-grid">
+
+          <div>
+            <p class="lead">
+              Shelved drug programs are numerous and scattered across
+              company pipelines, trial registries, and the literature,
+              which makes them hard to evaluate systematically.
+            </p>
+
+            <p class="lead">
+              Zawa is building an AI-enabled asset intelligence system to
+              help us identify, evaluate, compare, and prioritize these
+              programs.
+            </p>
+
+            <p class="lead">
+              The aim is to find programs where the evidence supports a
+              credible development thesis.
+            </p>
+          </div>
+
+          <div class="intelligence-points">
+
+            <div class="intelligence-point">
+              <h3>Inputs</h3>
+              <p>
+                Company pipelines and disclosures, trial registries, the
+                scientific literature, and the regulatory record.
+              </p>
+            </div>
+
+            <div class="intelligence-point">
+              <h3>Output</h3>
+              <p>
+                A structured evidence file for each program, assessed
+                against the same framework.
+              </p>
+            </div>
+
+            <div class="intelligence-point">
+              <h3>Judgment</h3>
+              <p>
+                Experienced drug developers review every output and make
+                the final calls.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- WHAT WE LOOK FOR -->
+
+    <section id="focus">
+      <div class="container">
+
+        <div class="section-label">What We Look For</div>
+
+        <h2>Advanced assets with unresolved development questions.</h2>
+
+        <p class="lead">
+          We start from existing data. Our interest is in small molecules
+          where meaningful work has been done but the asset has not yet
+          reached its potential.
+        </p>
+
+        <div class="criteria-grid">
+
+          <div class="criterion">
+            <h3>Clinically tested or IND-ready</h3>
+            <p>
+              An existing body of data that can inform the next
+              development decision.
+            </p>
+          </div>
+
+          <div class="criterion">
+            <h3>Deprioritized or non-core</h3>
+            <p>
+              No longer a fit for the owner's portfolio, therapeutic focus,
+              or capital plans.
+            </p>
+          </div>
+
+          <div class="criterion">
+            <h3>Diagnosable development challenge</h3>
+            <p>
+              A reason for the stall that can be identified, and a
+              hypothesis for addressing it that can be tested.
+            </p>
+          </div>
+
+          <div class="criterion">
+            <h3>Therapeutic-area agnostic</h3>
+            <p>
+              The team's recent experience spans oncology, inflammation,
+              musculoskeletal disease (including osteoarthritis), and
+              neurology.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- LEADERSHIP -->
+
+    <section id="leadership">
+      <div class="container">
+
+        <div class="section-label">Leadership</div>
+
+        <h2>Led by experienced drug developers.</h2>
+
+        <p class="lead">
+          Zawa's founders have worked across clinical development, medical
+          affairs, regulatory strategy, and business development, in
+          global pharma and emerging biotech.
+        </p>
+
+        <div class="team-grid">
+
+          <div class="team-card">
+            <h3>Mirta Grifman, PhD</h3>
+            <div class="team-title">Co-Founder &amp; CEO</div>
+            <p>
+              More than 25 years in pharma and biotech across the full
+              product lifecycle, from discovery to post-approval, with
+              experience in clinical development, medical affairs, and
+              business development.
+            </p>
+            <div class="team-companies">
+              Immusol · Novartis · Cephalon · Teva · GSK ·
+              Biosplice Therapeutics
+            </div>
+          </div>
+
+          <div class="team-card">
+            <h3>Jeymi Tambiah, MD</h3>
+            <div class="team-title">Co-Founder &amp; Advisor</div>
+            <p>
+              Physician-scientist and biopharmaceutical executive with
+              experience in clinical development, medical and regulatory
+              strategy, product development, and surgery.
+            </p>
+            <div class="team-companies">
+              UCB · Biosplice Therapeutics · Genascence ·
+              Eupraxia Pharmaceuticals
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-label">Contact</div>
+
+        <h2>Have a program worth a second look?</h2>
+
+        <p class="lead">
+          We want to hear from companies, universities, and other asset
+          owners, as well as investors and partners, about small-molecule
+          programs that could benefit from focused development.
+        </p>
+
+        <p class="contact-note">
+          Please share non-confidential information only. We will put a
+          CDA in place before any confidential exchange.
+        </p>
+
+        <a class="button" href="mailto:info@zawatx.com">Contact Zawa</a>
+
+        <p class="contact-email">
+          Or write to <a href="mailto:info@zawatx.com">info@zawatx.com</a>
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Zawa Therapeutics, LLC. All rights reserved.</span>
+      <span>San Diego, California · zawatx.com</span>
+    </div>
+  </footer>
+
+</body>
+</html>

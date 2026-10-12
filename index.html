@@ -44,6 +44,9 @@
     "url": "https://zawatx.com",
     "email": "info@zawatx.com",
     "foundingDate": "2025",
+      "industry": "Biotechnology",
+  "sameAs": [
+    "https://www.linkedin.com/company/zawa-therapeutics/",
     "description": "An early-stage, development-first biotechnology company that finds, in-licenses, and advances overlooked small-molecule therapeutics, guided by deep drug-development experience and AI-enabled analysis.",
     "knowsAbout": ["Drug development", "Small-molecule therapeutics", "In-licensing"],
     "founder": [
@@ -477,20 +480,29 @@
       font-weight: 600;
     }
 
-    /* Footer */
+  /* Footer */
 
-    footer {
-      background: var(--navy-deep);
-      color: #8fa2b0;
-      padding: 28px 0;
-      font-size: 13px;
-    }
+footer {
+  background: var(--navy-deep);
+  color: #8fa2b0;
+  padding: 28px 0;
+  font-size: 13px;
+}
 
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-    }
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-link {
+  color: #8fa2b0;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
 
     /* Mobile */
 
@@ -881,12 +893,30 @@ could change the outcome.
 
   <!-- FOOTER -->
 
-  <footer>
-    <div class="container footer-inner">
-      <span>© 2026 Zawa Therapeutics, LLC. All rights reserved.</span>
-      <span>zawatx.com</span>
-    </div>
-  </footer>
+<footer>
+
+  <div class="container footer-inner">
+
+    <span>
+      © 2026 Zawa Therapeutics, LLC. All rights reserved.
+    </span>
+
+    <span>
+      <a
+        href="https://www.linkedin.com/company/zawa-therapeutics/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer-link"
+      >
+        LinkedIn
+      </a>
+      &nbsp;·&nbsp;
+      zawatx.com
+    </span>
+
+  </div>
+
+</footer>
 
 </body>
 </html>
